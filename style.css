@@ -1,14 +1,19 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900&display=swap');
+
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+
 body, html {
     height: 100%;
     width: 100%;
     overflow: hidden; /* Ensure no scrollbars or overflow */
-    font-family: Arial, sans-serif;
+     font-family: "Tajawal", sans-serif;;
 }
 
 .container {
@@ -128,8 +133,8 @@ header h6 {
 
 /* Cards */
 .card {
-    width: 170px;
-    height: 200px;
+    width: 200px;
+    height: 250px;
     border: 3px solid #982C5E;
     border-radius: 20px;
     background-color: transparent;
@@ -182,13 +187,17 @@ card-inner {
 }
 
 .card img {
-    width: 120px;
-    height: 150px;
-    margin-bottom: 10px;
+    width: 170px;
+    height:170px;
+    padding: 15px;
 }
 
 .card p {
-    font-size: 16px;
+    font-size: 23px;
+    position: fixed;
+    bottom: 3%;
+    left: 30%;
+    font-weight: bold;
 }
 
 /* Card Positioning */
@@ -200,6 +209,9 @@ card-inner {
 
 /* Equal space between cards */
 .card {
+    justify-content: space-around;
+    display: flex;
+    flex-direction: column;
     margin: 0 10px; /* Add margin between the cards */
     transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
@@ -265,8 +277,8 @@ footer a {
 }
 
 .bottom-left-icon img {
-    width: 100px    ;
-    height: 100px;
+    width: 300px    ;
+    height: 300px;
 }
 
 .hidden { 

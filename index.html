@@ -1,95 +1,136 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Card Carousel with Precise Viewport</title>
-    <link rel="stylesheet" href="style.css"> 
-</head>
-<body>
 
-    <!-- Animated Loading Screen -->
-    <div id="loader"></div>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Card Carousel with Precise Viewport</title>
 
-    <div class="container">
-        <!-- Top-left and top-right icons -->
-        <div class="top-icons">
-            <a href="#"><img src="img/lefttop.png" alt="left Icon"></a>
-            <a href="#"><img src="img/righttop.png" alt="right Icon"></a>
-        </div>
+        <link rel="stylesheet" href="style.css">
+        <style>
+            /* Style the image */
+            .animated-image {
+                width: 200px;
+                /* Adjust size as needed */
+                transition: transform 0.3s ease;
+            }
 
-        <!-- Animated header -->
-        <header>
-            <h6 class="scrolling-text"></h6>
-        </header>
+            /* Scale animation on hover */
+            .animated-image {
+                animation: bounce 0.6s ease infinite alternate;
+            }
 
-        <!-- Header Text Above Carousel -->
-        <div class="header-logo">
-            <a href="#"><img src="img/Logo-full.svg" alt="center Icon"></a>
-        </div>
+            /* Keyframes for bounce effect */
+            @keyframes bounce {
+                0% {
+                    transform: translateY(0);
+                }
 
-        <!-- Carousel Section -->
-        <div class="carousel-container">
-            <div class="carousel">
-                <div class="card position-1">
-                    <a href=""><img src="img/cups.png" alt="CUPS"></a>
-                    <p>CUPS</p>
-                </div>
-                <div class="card position-2">
-                   <a href=""><img src="img/about.png" alt="About"></a>
-                    <p>ABOUT</p>
-                </div>
-                <div class="card position-3">
-                   <a href=""><img src="img/Merch.svg" alt="MERCH"></a> 
-                    <p>MERCH</p>
-                </div>
-                <div class="card position-4">
-                    <a href=""><img src="img/specials.png" alt="SPECIALS"></a>
-                    <p>SPECIALS</p>
-                </div>
-                <div class="card position-5">
-                    <a href=""><img src="img/delivery.svg" alt="Delivery"></a>
-                    <p>DELIVERY</p>
-                </div>
-                <div class="card position-6">
-                    <a href=""><img src="img/Branchs.svg" alt="branches"></a>
-                    <p>Branches</p>
-                </div>
-                <div class="card position-7">
-                    <a href=""><img src="img/Gifts.svg" alt="gifts"></a>
-                    <p>GIFTS</p>
-                </div>
-                <div class="card position-8">
-                    <a href=""><img src="img/Products.svg" alt="products"></a>
-                    <p>PRODUCTS</p>
-                </div>
-                
+                50% {
+                    transform: translateY(-10px);
+                }
+
+                100% {
+                    transform: translateY(0);
+                }
+            }
+
+        </style>
+    </head>
+
+    <body>
+
+        <!-- Animated Loading Screen -->
+        <div id="loader"></div>
+
+        <div class="container">
+            <!-- Top-left and top-right icons -->
+            <div class="top-icons">
+                <a href="#"><img src="img/lefttop.png" alt="left Icon"></a>
+                <a href="#"><img src="img/righttop.png" alt="right Icon"></a>
             </div>
+
+            <!-- Animated header -->
+            <header>
+                <h6 class="scrolling-text"></h6>
+            </header>
+
+            <!-- Header Text Above Carousel -->
+            <div class="header-logo">
+                <a href="#"><img src="img/Logo-full.svg" alt="center Icon"></a>
+            </div>
+
+            <!-- Carousel Section -->
+            <div class="carousel-container">
+                <div class="carousel">
+                    <div class="card position-1">
+                        <a href=""><img src="img/Cups.svg" alt="CUPS"></a>
+                        <p>CUPS</p>
+                    </div>
+                    <div class="card position-2">
+                        <a href=""><img src="img/About.svg" alt="About"></a>
+                        <p>ABOUT</p>
+                    </div>
+                    <div class="card position-3">
+                        <a href=""><img src="img/Merch.svg" alt="MERCH"></a>
+                        <p>MERCH</p>
+                    </div>
+                    <div class="card position-4">
+                        <a href=""><img src="img/Special.svg" alt="SPECIALS"></a>
+                        <p>SPECIALS</p>
+                    </div>
+                    <div class="card position-5">
+                        <a href=""><img src="img/delivery.svg" alt="Delivery"></a>
+                        <p>DELIVERY</p>
+                    </div>
+                    <div class="card position-6">
+                        <a href=""><img src="img/Branchs.svg" alt="branches"></a>
+                        <p>Branches</p>
+                    </div>
+                    <div class="card position-7">
+                        <a href=""><img src="img/Gifts.svg" alt="gifts"></a>
+                        <p>GIFTS</p>
+                    </div>
+                    <div class="card position-8">
+                        <a href=""><img src="img/Products.svg" alt="products"></a>
+                        <p>PRODUCTS</p>
+                    </div>
+                    <div class="card position-8">
+                        <a href=""><img src="img/Lids.svg" alt="Linds"></a>
+                        <p>PRODUCTS</p>
+                    </div>
+
+
+                </div>
+            </div>
+
+            <!-- Controls with arrows and rotating star -->
+            <div class="controls">
+                <button class="arrow left-arrow">&#10094;</button>
+                <div class="star"><img src="img/specials.png" width="60px" height="50px"></div>
+                <button class="arrow right-arrow">&#10095;</button>
+            </div>
+            <!-- Icon at bottom left -->
+            <div class="bottom-left-icon ">
+                <a href="#"><img src="img/Let's-be-friends-Charcter Octo Color.svg" alt="Icon"
+                        class="animated-image"></a>
+
+
+            </div>
+
+            <!-- Footer Section -->
+            <footer>
+                <a href="" name="Tiktok">Tiktok</a>
+                <a href="" name="instagram">Instagram</a>
+                <a href="" name="contact">Contact</a>
+                <a href="" name="T&Cs">T&Cs</a>
+
+
+                <script src="script.js"></script>
+
+            </footer>
         </div>
 
-        <!-- Controls with arrows and rotating star -->
-        <div class="controls">
-            <button class="arrow left-arrow">&#10094;</button>
-            <div class="star"><img src="img/specials.png" width="60px" height="50px"></div>
-            <button class="arrow right-arrow">&#10095;</button>
-        </div>
-         <!-- Icon at bottom left -->
-        <div class="bottom-left-icon">
-            <a href="#"><img src="img/Let's-be-friends-Charcter Octo Color.svg" alt="Icon"></a>
-        </div>
+    </body>
 
-        <!-- Footer Section -->
-        <footer>
-            <a href="" name="Tiktok" >Tiktok</a>
-            <a href="" name="instagram" >Instagram</a>
-            <a href="" name="contact" >Contact</a>
-            <a href="" name="T&Cs" >T&Cs</a>
-
-
-            <script src="script.js"></script>
-
-        </footer>
-    </div>
-
-</body>
 </html>
